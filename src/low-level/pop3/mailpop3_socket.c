@@ -51,6 +51,11 @@
 #endif
 #include <stdlib.h>
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
 #define DEFAULT_POP3_PORT 110
 #define SERVICE_NAME_POP3 "pop3"
 #define SERVICE_TYPE_TCP "tcp"

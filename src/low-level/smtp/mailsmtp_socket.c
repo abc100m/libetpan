@@ -52,6 +52,12 @@
 #	include <unistd.h>
 #endif
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
+
 #define DEFAULT_SMTP_PORT 25
 #define SERVICE_NAME_SMTP "smtp"
 #define SERVICE_TYPE_TCP "tcp"

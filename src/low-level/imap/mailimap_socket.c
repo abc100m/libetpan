@@ -37,6 +37,10 @@
 #	include <config.h>
 #endif
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
 #include "mailimap_socket.h"
 
 #include "mailimap.h"

@@ -41,6 +41,7 @@ noinst_PROGRAMS = smime decrypt pgp frm frm-tree frm-simple	\
 CFLAGS += -ULIBETPAN_DLL
 AM_CPPFLAGS = -I$(top_builddir)/include
 LDADD = ../src/libetpan.la
+LIBS += -liconv
 
 FRMCOMMON = frm-common.h frm-common.c option-parser.h option-parser.c
 

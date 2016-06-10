@@ -51,6 +51,11 @@
 #	include <unistd.h>
 #endif
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
 #include "mailstream_cfstream.h"
 
 #define DEFAULT_IMAPS_PORT 993

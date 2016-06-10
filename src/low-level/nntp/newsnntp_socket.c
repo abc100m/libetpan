@@ -44,6 +44,11 @@
 #include "mailstream_cfstream.h"
 #include "connect.h"
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
 #ifdef HAVE_NETINET_IN_H
 #	include <netinet/in.h>
 #endif

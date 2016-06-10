@@ -23,7 +23,12 @@ int main(int argc, char ** argv)
 		exit(EXIT_FAILURE);
 	}
 	
-	mkdir("download", 0700);
+	//mkdir("download", 0700);
+#ifdef WIN32
+	r = mkdir("download");
+#else
+    r = mkdir("download", 0700);
+#endif	
 	
 	pop3 = mailpop3_new(0, NULL);
 	r = mailpop3_ssl_connect(pop3, "pop.gmail.com", 995);

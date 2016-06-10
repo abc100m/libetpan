@@ -51,6 +51,12 @@
 #endif
 #include <stdlib.h>
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
+
 #define DEFAULT_POP3S_PORT 995
 #define SERVICE_NAME_POP3S "pop3s"
 #define SERVICE_TYPE_TCP "tcp"

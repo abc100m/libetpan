@@ -188,7 +188,12 @@ int main(int argc, char ** argv)
 		exit(EXIT_FAILURE);
 	}
 	
-	mkdir("download", 0700);
+	//mkdir("download", 0700);
+#ifdef WIN32
+	r = mkdir("download");
+#else
+    r = mkdir("download", 0700);
+#endif	
 	
 	imap = mailimap_new(0, NULL);
 	r = mailimap_ssl_connect(imap, "imap.gmail.com", 993);

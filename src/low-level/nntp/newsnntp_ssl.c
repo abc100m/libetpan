@@ -50,6 +50,11 @@
 #	include <unistd.h>
 #endif
 
+#ifdef _WIN32
+#include "windows.h"
+#endif
+
+
 #define DEFAULT_NNTPS_PORT 563
 #define SERVICE_NAME_NNTPS "nntps"
 #define SERVICE_TYPE_TCP "tcp"
